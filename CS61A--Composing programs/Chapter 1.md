@@ -30,4 +30,36 @@ The significance of environment lies in that it indicates clearly the functions 
 
 #### The process of evaluation
 1. Evaluate the operator and operand subexpressions.
-2. Only apply the function when 
+2. Apply the function to values at the end points of the expression tree.
+
+***The  expression tree and the application***
+Indicates the natural idea of recursion.
+
+#### Pure and non-pure pring functions
+##### Pure functions
+Given input, functions return some output. (*'The value of the function' is meaningful.*)
+
+**Critical feature**: no other effect than returning a value(aka doing a 'calculation').
+
+**Advantage:** 
+	1. always return useful (or meaningful) results
+	2. simpler to test
+##### Non-pure functions
+**Critical feature**: having some other effect than returning a value (like making some change to the state of the interpreter or computer)
+
+**Example**: The print function
+```python
+>>> print(1,2,3)
+1 2 3 #comma separates items rather than acts as something to be appeared in the output
+>>> print(print(1,2,3))
+1 2 3
+None
+>>> print(print(1),print(2))
+1 #it seems that print()=printf("\n")in C
+2
+None None
+```
+
+*Remark:* That print outputs None indicates that it should be avoided when doing assignments.
+
+While non-pure functions empowers strong features, we should be especially cautious when using them along with assignments.
