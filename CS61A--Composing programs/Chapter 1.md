@@ -1,4 +1,13 @@
 ## 1.1 Getting started
+**Statements and expressions:**  instructions to 
+1. compute some value ---- expression
+2. carry out some action ---- statement
+
+**Functions:** encapsulate logic that manipulates data (like some built blocks from elementary elements to perform some certain actions)
+
+**Objects:** 
+
+**Interpreters:** 
 
 
 
@@ -63,3 +72,5 @@ None None
 *Remark:* That print outputs None indicates that it should be avoided when doing assignments.
 
 While non-pure functions empowers strong features, we should be especially cautious when using them along with assignments.
+
+## 1.3 Defining new functions
